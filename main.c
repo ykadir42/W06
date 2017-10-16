@@ -5,12 +5,13 @@
 int main(){
 	printf("start\n");
 	struct node * head = NULL;
-	head = insert_front(head, "first");
+	head = insert_front(head, 3);
 	printf("head: %p\n", head);
-	head = insert_front(head, "FIRST!!!");
+	head = insert_front(head, 2);
 	printf("head: %p\n", head);
-	head = insert_front(head, "NO I'M FIRST >:D");
-	printf("head: %p\n", head);
+	//head = insert_front(head, 1);
+	//printf("head: %p\n", head);
+	printf("starting to print");
 	print_list(head);
 	free_list(head);
 	return 0;

@@ -4,15 +4,16 @@
 
 void print_list(struct node * p){
 	if(p==NULL) return;
+	printf("printing");
 	printf("[");
 	while(p->next!=NULL){
-		printf("%s, ", p->s);
+		printf("%d, ", p->s);
 		p = p->next;
 	}
-	printf("%s]\n", p->s);
+	printf("%d]\n", p->s);
 }
 
-struct node * insert_front(struct node * p, char * s){
+struct node * insert_front(struct node * p, int s){
 	struct node * ans = (struct node *)malloc(sizeof(struct node));
 	struct node new;
 	*ans = new;
